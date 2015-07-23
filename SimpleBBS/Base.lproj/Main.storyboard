@@ -8,7 +8,7 @@
         <!--BBS-->
         <scene sceneID="p0y-Qu-vNj">
             <objects>
-                <tableViewController id="YDM-d0-Dec" sceneMemberID="viewController">
+                <tableViewController id="YDM-d0-Dec" customClass="FirstViewController" customModule="SimpleBBS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="99" sectionHeaderHeight="22" sectionFooterHeight="22" id="c7W-ek-NhK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,10 +38,10 @@
             </objects>
             <point key="canvasLocation" x="834" y="10"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="wRA-ge-faS">
             <objects>
-                <viewController id="bLr-lB-Yao" sceneMemberID="viewController">
+                <viewController id="bLr-lB-Yao" customClass="SecondViewController" customModule="SimpleBBS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vcW-5D-V6a"/>
                         <viewControllerLayoutGuide type="bottom" id="yiB-hC-xnW"/>
@@ -68,7 +68,7 @@
                                     <constraint firstAttribute="width" constant="46" id="KbV-PP-8Uf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJX-IS-aG9">
@@ -78,7 +78,7 @@
                                     <constraint firstAttribute="width" constant="32" id="mvI-wd-wsV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
