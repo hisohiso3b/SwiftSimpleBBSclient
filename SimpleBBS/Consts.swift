@@ -8,4 +8,4 @@
 
 import Foundation
 
-let baseurl = "http://localhost"
+let baseurl = "http://localhost/"

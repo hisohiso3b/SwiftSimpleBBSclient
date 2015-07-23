@@ -98,8 +98,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="scf-Wo-Ngk">
-                        <barButtonItem key="rightBarButtonItem" title="SEND" id="Hhw-Bx-FJI"/>
+                        <barButtonItem key="rightBarButtonItem" title="SEND" id="Hhw-Bx-FJI">
+                            <connections>
+                                <action selector="sendMessage:" destination="bLr-lB-Yao" id="EeL-lL-uev"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="contentTextview" destination="05N-CT-L3T" id="DjN-F8-Nep"/>
+                        <outlet property="nameTextfield" destination="qfk-Iw-Zsk" id="meC-id-5Ix"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D2j-yb-c3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,6 +11,8 @@ import Alamofire
 import SwiftyJSON
 
 class SecondViewController: UIViewController {
+    @IBOutlet weak var nameTextfield: UITextField!
+    @IBOutlet weak var contentTextview: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,27 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
+    
+    @IBAction func sendMessage(sender: AnyObject) {
+        if nameTextfield.text != "" && contentTextview.text != "" {
+            
+        }else{
+            
+            let alertController = UIAlertController(
+                title: "error",
+                message: "input name and contents",
+                preferredStyle: .Alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: .Default){
+                action in
+                println("ok pushed")
+            }
+            
+            alertController.addAction(okAction)
+            presentViewController(alertController, animated: true, completion: nil)
+            
+        }
+    }
 
 }
 
