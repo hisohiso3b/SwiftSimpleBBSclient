@@ -19,7 +19,14 @@ class FirstViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        refreshTable();
+    }
 
+    func refreshTable(){
+        
+    }
 
 }
 

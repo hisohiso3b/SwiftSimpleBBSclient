@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B0C0A7531B60DA5900E938B7 /* SwiftyJSON.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = B0C0A74C1B60DA4D00E938B7 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B0C0A7541B60DA5900E938B7 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = B0C0A73D1B60DA4000E938B7 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0C0A7581B60DB9200E938B7 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0A7571B60DB9200E938B7 /* Consts.swift */; };
 		B0CCDF7B1B5EDA910069DBE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CCDF7A1B5EDA910069DBE1 /* AppDelegate.swift */; };
 		B0CCDF7D1B5EDA910069DBE1 /* BBSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CCDF7C1B5EDA910069DBE1 /* BBSViewController.swift */; };
 		B0CCDF7F1B5EDA910069DBE1 /* POSTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CCDF7E1B5EDA910069DBE1 /* POSTViewController.swift */; };
@@ -102,6 +103,7 @@
 /* Begin PBXFileReference section */
 		B0C0A7351B60DA4000E938B7 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../../../Downloads/Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		B0C0A7441B60DA4D00E938B7 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = "../../../Downloads/SwiftyJSON-master/SwiftyJSON.xcodeproj"; sourceTree = "<group>"; };
+		B0C0A7571B60DB9200E938B7 /* Consts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		B0CCDF751B5EDA910069DBE1 /* SimpleBBS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleBBS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0CCDF791B5EDA910069DBE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0CCDF7A1B5EDA910069DBE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				B0CCDF7A1B5EDA910069DBE1 /* AppDelegate.swift */,
+				B0C0A7571B60DB9200E938B7 /* Consts.swift */,
 				B0CCDF7C1B5EDA910069DBE1 /* BBSViewController.swift */,
 				B0CCDF7E1B5EDA910069DBE1 /* POSTViewController.swift */,
 				B0CCDF801B5EDA910069DBE1 /* Main.storyboard */,
@@ -385,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0CCDF7F1B5EDA910069DBE1 /* POSTViewController.swift in Sources */,
+				B0C0A7581B60DB9200E938B7 /* Consts.swift in Sources */,
 				B0CCDF7B1B5EDA910069DBE1 /* AppDelegate.swift in Sources */,
 				B0CCDF7D1B5EDA910069DBE1 /* BBSViewController.swift in Sources */,
 			);
