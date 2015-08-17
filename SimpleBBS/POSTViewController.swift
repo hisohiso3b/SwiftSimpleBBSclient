@@ -26,6 +26,23 @@ class SecondViewController: UIViewController {
     @IBAction func sendMessage(sender: AnyObject) {
         if nameTextfield.text != "" && contentTextview.text != "" {
             
+            var params = [
+                "name" : nameTextfield.text,
+                "content" : contentTextview.text
+            ]
+            
+            Alamofire.request(.POST, baseurl+"post", parameters: params, encoding: .JSON)
+                .responseJSON { request, response, json, error in
+                    if error != nil {
+                        println(error)
+                        self.errorMessage()
+                    }else{
+                        var json = JSON(json!)
+                        println(json)
+                        self.successMessage()
+                    }
+            }
+            
         }else{
             
             let alertController = UIAlertController(
@@ -42,6 +59,38 @@ class SecondViewController: UIViewController {
             presentViewController(alertController, animated: true, completion: nil)
             
         }
+    }
+    
+    func errorMessage(){
+        let alertController = UIAlertController(
+            title: "error",
+            message: "connection error",
+            preferredStyle: .Alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .Default){
+            action in
+            println("ok pushed")
+        }
+        
+        alertController.addAction(okAction)
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func successMessage(){
+        let alertController = UIAlertController(
+            title: "SENDED",
+            message: "name: " + nameTextfield.text + "\n" + "content: " + contentTextview.text,
+            preferredStyle: .Alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .Default){
+            action in
+            println("ok pushed")
+            
+            self.navigationController?.popViewControllerAnimated(true)
+        }
+        
+        alertController.addAction(okAction)
+        presentViewController(alertController, animated: true, completion: nil)
     }
 
 }

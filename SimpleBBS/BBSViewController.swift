@@ -26,14 +26,16 @@ class FirstViewController: UITableViewController {
     }
 
     func refreshTable(){
-        Alamofire.request(.GET, baseurl+"get_posts")
+        Alamofire.request(.GET, baseurl+"get?0=Hello&1=World&2=foo&3=bar")
             .responseJSON { request, response, json, error in
                 if error != nil {
                     println(error)
                     self.errorMessage()
                 }else{
-                    var contents = JSON(json!)
-                    println(contents)
+                    var json = JSON(json!)
+                    self.contents = json["args"]
+                    println(self.contents)
+                    self.tableView.reloadData()
                 }
         }
     }
@@ -64,23 +66,23 @@ class FirstViewController: UITableViewController {
     
     /*
     Cellの総数を返すデータソースメソッド.
-    (実装必須)
     */
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        println(contents.count)
         return contents.count
     }
     
     /*
     Cellに値を設定するデータソースメソッド.
-    (実装必須)
     */
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        // 再利用するCellを取得する.
+        // Cell取得
         let cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath) as! UITableViewCell
         
-        // Cellに値を設定する.
-        cell.textLabel!.text = "\(contents[indexPath.row])"
+        // 値を設定
+        var rowString: String = "\(indexPath.row)"
+        cell.textLabel!.text = contents[rowString].string!
         
         return cell
     }
